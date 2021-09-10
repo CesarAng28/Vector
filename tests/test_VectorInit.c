@@ -17,7 +17,7 @@ void test_VectorInit(void){
     Vector test_vector = NULL;
     test_vector = InitVector(SIZE);
     TEST_ASSERT_NOT_NULL(test_vector);
-    free(test_vector);
+    freeVector(test_vector);
     
 }
 
@@ -31,10 +31,19 @@ void test_FreeVector(void){
     
 }
 
+
+
+
 int main(void){
-    UNITY_BEGIN();
     
+    UNITY_BEGIN();
     RUN_TEST(test_VectorInit, __LINE__);
-   RUN_TEST(test_FreeVector, __LINE__);
+    RUN_TEST(test_FreeVector, __LINE__);
+    
+    Vector test_vector3 = NULL;
+    test_vector3 = InitVector(SIZE);
+    setVector(SIZE, test_vector3->components);
+    imprimirVector(SIZE, test_vector3->components);
+    test_vector3=freeVector(test_vector3);
     return UNITY_END();
 }

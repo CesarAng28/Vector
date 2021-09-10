@@ -23,3 +23,9 @@ void setVector(size_t dimensions, float array[dimensions]){
         array[i]= rand() % 50;
     }
 }
+
+void imprimirVector(size_t dimensions, float array[dimensions]){
+  for(int i=0; i<dimensions; i++){
+    printf("memoria %p, indice %u elemento %f\n", &array[i], i, array[i]);
+  }
+}

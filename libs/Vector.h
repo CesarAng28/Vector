@@ -33,6 +33,5 @@ typedef struct _Vector* Vector;
 Vector InitVector(size_t dimensions);
 Vector freeVector(Vector phasor);
 void setVector(size_t dimensions, float array[dimensions]);
-
-
+void imprimirVector(size_t dimensions, float array[dimensions]);
 #endif
