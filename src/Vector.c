@@ -14,3 +14,12 @@ Vector InitVector(size_t dimensions)
     return newVector;
 }
 
+Vector freeVector(Vector phasor){
+    free(phasor);
+}
+
+void setVector(size_t dimensions, float array[dimensions]){
+    for(int i=0; i<dimensions; i++){
+        array[i]= rand() % 50;
+    }
+}
