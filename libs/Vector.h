@@ -1,6 +1,6 @@
 /**
  * @Author Alonso Cabezut
- * @Date 17 Aug 2021
+ * @Date 8 Sep 2021
  * @Name Vector.h
  * @Copyright TDA Otoño 2021
  */
@@ -24,25 +24,15 @@ struct _Vector{
 
 // Wrapper
 typedef struct _Vector* Vector;
-typedef enum{
-    _FALSE,
-    _TRUE
-}_bool;
 
 // Interfaces
 
 // Generator/Constructors
 
 
-ComplexNumber newComplexNumber(void);
+Vector InitVector(size_t dimensions);
 
 
-ComplexNumber setComplexNumber(ComplexNumber phasor, float real, float imaginary);
 
-
-ComplexNumber getComplexNumberComponents(ComplexNumber phasor, float *real, float *imaginary);
-
-
-ComplexNumber freeComplexNumber(ComplexNumber phasor);
 
 #endif
